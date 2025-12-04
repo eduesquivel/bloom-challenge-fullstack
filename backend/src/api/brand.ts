@@ -21,8 +21,8 @@ const getBrandById = async (
     const brand = await BrandService.retrieve(id);
     res.status(200).json(brand);
   } catch (error) {
-    console.error("Error fetching brand:", error);
-    res.status(500).json(error);
+    console.error("Could not find brand:", error);
+    res.status(404).json(error);
   }
   next();
 };
