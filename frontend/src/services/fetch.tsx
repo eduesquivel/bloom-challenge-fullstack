@@ -3,10 +3,18 @@
 
 import { Brand } from "@/types/types";
 
-export default async function fetchBrands(): Promise<Brand[]> {
+export async function fetchBrands(): Promise<Brand[]> {
   const response = await fetch('http://localhost:8000/brands')
   if (!response.ok) throw new Error(`Response status: ${response.status}`)
 
   const brands = await response.json()
   return brands
 }
+
+export async function fetchBrand(brand_id: string): Promise<Brand> {
+  const response = await fetch(`http://localhost:8000/brands/${brand_id}`)
+  if (!response.ok) throw new Error(`Response status: ${response.status}`)
+
+  const brand = await response.json()
+  return brand
+} 

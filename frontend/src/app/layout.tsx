@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 import { Manrope } from "next/font/google";
 import "./globals.css";
@@ -18,8 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} bg-gray font-black`}
-      >{children}</body>
+      <body className={`${manrope.className} bg-gray font-black`}>
+        {children}
+      </body>
     </html>
   );
 }

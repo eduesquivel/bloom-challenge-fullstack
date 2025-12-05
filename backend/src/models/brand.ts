@@ -3,6 +3,7 @@ export type Brand = {
   name: string;
   url: string;
   imageUrl: string;
+  logoImageUrl: string;
   faqs?: {
     question: string,
     answer: string,
