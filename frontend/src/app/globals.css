@@ -1,2 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+  --color-gray: hsl(0,0%,95%);
+  --animate-fadein: fadeIn 2s forwards;
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+}
